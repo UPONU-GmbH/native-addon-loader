@@ -1,0 +1,28 @@
+{
+    "title": "Native Node Loader options",
+    "type": "object",
+    "properties": {
+      "name": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "instanceof": "Function"
+          }
+        ]
+      },
+      "from": {
+        "anyOf": [
+          {
+            "type": "string"
+          },
+          {
+            "instanceof": "Function"
+          }
+        ]
+      }
+    },
+    "additionalProperties": false
+  }
+  

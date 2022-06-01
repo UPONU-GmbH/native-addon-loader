@@ -3,15 +3,20 @@ const path = require('path')
 
 webpack({
   mode: 'development',
+  experiments: {
+    outputModule: true
+  },
   context: __dirname,
   entry: {
-    main: [path.join(__dirname, 'index.js')]
+    main: [path.join(__dirname, 'index.mjs')]
   },
   output: {
+    chunkFormat: 'module',
+    module: true,
     path: path.join(__dirname, 'dist'),
-    filename: 'js/[name].js'
+    filename: 'js/[name].mjs'
   },
-  devtool: 'none',
+  devtool: false,
   target: 'node',
   module: {
     rules: [
